@@ -16,7 +16,7 @@ def create_personality(game_name):
         voice_list = json.load(open('default_voices/female_voices.json', 'r'))
 
     # Generate random name
-    name = names.get_full_name(gender=gender)
+    name = "Atreus"
 
     # Select a voice
     selected_voice = random.choice(voice_list)['ShortName']
@@ -30,7 +30,8 @@ def create_personality(game_name):
                  model='command', temperature=1.4, max_tokens=300)
 
     # Create the template string
-    template = """Create a Cyberpunk Personality for the names\nDonna Loveless\nDonna Loveless is a tech-savvy data broker navigating the gritty streets of Cyberpunk 2077. With a keen eye for valuable information, she scours the dark corners of the Net, uncovering secrets and trading them for a living. Armed with a cybernetic eye implant and encrypted connections, Donna dances between corporate espionage and freelance gigs, always on the lookout for the next big score. Despite the dangers of her profession, she remains a regular citizen striving to survive in the dystopian metropolis, fighting to maintain her independence in a world dominated by technology and corruption.\nRandy Edwards\nRandy Edwards is a skilled mechanic residing in the bustling streets of Night City. With a gritty past as a street racer, he now spends his days repairing and enhancing cybernetic implants for the city's augmented residents. Randy's deft hands and intricate knowledge of technology have made him a sought-after technician in the underbelly of the neon-lit metropolis. As he navigates the seedy underbelly of the city, Randy strives to keep his head down and stay out of trouble, all while fine-tuning the gears of a broken world.\nNicole Mccormick\nNicole McCormick, a resilient and street-smart individual, navigates the neon-lit streets of Cyberpunk 2077 as a goods transport mercenary. With cybernetic enhancements subtly integrated into her body, she blends into the bustling metropolis seamlessly. Operating on the fringes of legality, Nicole uses her skillset and trusty hoverbike to deliver illicit cargo, evading the watchful eyes of both corporate security and rival gangs. Her reputation as a reliable and discreet transporter has made her a go-to choice for those seeking to move valuable goods through the treacherous urban landscape.\n{name}\n"""
+    template = """Create a personality profile for Atreus (Age: 12-14, Gender: Male, Race: Demigod):
+Atreus, the son of Kratos and a giantess named Faye, is a young demigod who navigates the harsh world of Norse mythology alongside his father. Although just a boy, Atreus exhibits a mix of curiosity, intelligence, and a strong moral compass. As he grows, he learns to balance his human emotions with his emerging god-like abilities. His journey is marked by the challenge of understanding his true identity, his powers, and his destiny."""
 
     # Create prompt
     prompt = PromptTemplate(template=template, input_variables=['name'])
