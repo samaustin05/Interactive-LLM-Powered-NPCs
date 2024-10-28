@@ -1,0 +1,666 @@
+2024-10-28 12:46:59:INFO:root:Logging is set up.
+2024-10-28 12:46:59:INFO:root:Script started.
+2024-10-28 12:46:59:DEBUG:httpx:load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-10-28 12:46:59:DEBUG:httpx:load_verify_locations cafile='C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\.venv\\lib\\site-packages\\certifi\\cacert.pem'
+2024-10-28 12:46:59:INFO:root:Cohere client initialized successfully.
+2024-10-28 12:46:59:INFO:root:Cohere client initialized successfully.
+2024-10-28 12:46:59:INFO:root:Loaded config: {'game_name': 'God_of_War_(2018)', 'game_url': 'https://godofwar.fandom.com/wiki/God_of_War_(2018)', 'characters': [{'name': 'Atreus', 'url': 'https://godofwar.fandom.com/wiki/Atreus', 'images': []}]}
+2024-10-28 12:46:59:INFO:root:Scraping game page: https://godofwar.fandom.com/wiki/God_of_War_(2018)
+2024-10-28 12:46:59:DEBUG:root:Starting to scrape URL: https://godofwar.fandom.com/wiki/God_of_War_(2018)
+2024-10-28 12:46:59:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): godofwar.fandom.com:443
+2024-10-28 12:46:59:DEBUG:urllib3.connectionpool:https://godofwar.fandom.com:443 "GET /wiki/God_of_War_(2018) HTTP/11" 200 70377
+2024-10-28 12:46:59:DEBUG:root:Received status code 200 for URL: https://godofwar.fandom.com/wiki/God_of_War_(2018)
+2024-10-28 12:46:59:DEBUG:root:Unwanted elements removed from the page: https://godofwar.fandom.com/wiki/God_of_War_(2018)
+2024-10-28 12:46:59:INFO:root:Successfully scraped data from https://godofwar.fandom.com/wiki/God_of_War_(2018)
+2024-10-28 12:46:59:DEBUG:root:Length of scraped_game_text: 8652 characters.
+2024-10-28 12:46:59:INFO:root:Generating world.txt
+2024-10-28 12:46:59:DEBUG:httpcore.connection:connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-10-28 12:47:00:DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDDD01AAD0>
+2024-10-28 12:47:00:DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CDDCC80140> server_hostname='api.cohere.com' timeout=300
+2024-10-28 12:47:00:DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDDD01AB30>
+2024-10-28 12:47:00:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:00:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:47:00:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:47:00:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:47:00:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:17:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'11891'), (b'num_tokens', b'2728'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'6e09081c311ba46ba363b93d6ac00c3b'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'39'), (b'date', b'Mon, 28 Oct 2024 02:17:17 GMT'), (b'x-envoy-upstream-service-time', b'17310'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:47:17:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:47:17:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:47:17:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:47:17:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:47:17:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:47:17:DEBUG:root:Text generated successfully.
+2024-10-28 12:47:17:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:47:17:DEBUG:root:Text is complete.
+2024-10-28 12:47:17:DEBUG:root:Attempt 1 - Generated Text Length: 2799 characters.
+2024-10-28 12:47:17:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:47:17:DEBUG:root:Text is complete.
+2024-10-28 12:47:17:DEBUG:root:world.txt content length: 2799 characters.
+2024-10-28 12:47:17:INFO:root:Generating public_info.txt
+2024-10-28 12:47:17:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:17:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:47:17:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:47:17:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:47:17:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:35:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'13633'), (b'num_tokens', b'3139'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'02473d2cce72cd6a72ef45eb09dd6d86'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'38'), (b'date', b'Mon, 28 Oct 2024 02:17:34 GMT'), (b'x-envoy-upstream-service-time', b'17309'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:47:35:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:47:35:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:47:35:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:47:35:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:47:35:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:47:35:DEBUG:root:Text generated successfully.
+2024-10-28 12:47:35:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:47:35:DEBUG:root:Text is incomplete. Generating continuation.
+2024-10-28 12:47:35:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:35:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:47:35:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:47:35:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:47:35:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:37:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'761'), (b'num_tokens', b'155'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'86145b973b75b01b6c267d8e7d8fa36e'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'37'), (b'date', b'Mon, 28 Oct 2024 02:17:37 GMT'), (b'Content-Length', b'1014'), (b'x-envoy-upstream-service-time', b'2355'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-10-28 12:47:37:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:47:37:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:47:37:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:47:37:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:47:37:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:47:37:DEBUG:root:Text generated successfully.
+2024-10-28 12:47:37:DEBUG:root:Completed text generation after continuation.
+2024-10-28 12:47:37:DEBUG:root:Attempt 1 - Generated Text Length: 5253 characters.
+2024-10-28 12:47:37:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:47:37:DEBUG:root:Text is incomplete. Generating continuation.
+2024-10-28 12:47:37:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:37:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:47:37:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:47:37:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:47:37:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:40:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'798'), (b'num_tokens', b'160'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'569cbdce867e5c4c7cf02846f6ac1c3e'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'36'), (b'date', b'Mon, 28 Oct 2024 02:17:40 GMT'), (b'Content-Length', b'1061'), (b'x-envoy-upstream-service-time', b'2443'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-10-28 12:47:40:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:47:40:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:47:40:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:47:40:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:47:40:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:47:40:DEBUG:root:Text generated successfully.
+2024-10-28 12:47:40:DEBUG:root:Completed text generation after continuation.
+2024-10-28 12:47:40:DEBUG:root:public_info.txt content length: 5986 characters.
+2024-10-28 12:47:40:INFO:root:Writing world.txt and public_info.txt
+2024-10-28 12:47:40:INFO:root:Wrote text file: God_of_War_(2018)\world.txt
+2024-10-28 12:47:40:INFO:root:Wrote text file: God_of_War_(2018)\public_info.txt
+2024-10-28 12:47:40:INFO:root:Processing character: Atreus
+2024-10-28 12:47:40:INFO:root:Scraping character page: https://godofwar.fandom.com/wiki/Atreus
+2024-10-28 12:47:40:DEBUG:root:Starting to scrape URL: https://godofwar.fandom.com/wiki/Atreus
+2024-10-28 12:47:40:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): godofwar.fandom.com:443
+2024-10-28 12:47:40:DEBUG:urllib3.connectionpool:https://godofwar.fandom.com:443 "GET /wiki/Atreus HTTP/11" 200 130781
+2024-10-28 12:47:40:DEBUG:root:Received status code 200 for URL: https://godofwar.fandom.com/wiki/Atreus
+2024-10-28 12:47:41:DEBUG:root:Unwanted elements removed from the page: https://godofwar.fandom.com/wiki/Atreus
+2024-10-28 12:47:41:INFO:root:Successfully scraped data from https://godofwar.fandom.com/wiki/Atreus
+2024-10-28 12:47:41:DEBUG:root:Length of scraped_character_text: 100764 characters.
+2024-10-28 12:47:41:INFO:root:Generating bio.txt for Atreus
+2024-10-28 12:47:41:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:47:41:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:47:41:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:47:41:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:47:41:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:14:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'105826'), (b'num_tokens', b'23544'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'2cbf774d5239b462005ddf4ef3a71dfb'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'35'), (b'date', b'Mon, 28 Oct 2024 02:18:13 GMT'), (b'x-envoy-upstream-service-time', b'32774'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:48:14:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:48:14:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:48:14:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:48:14:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:48:14:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:48:14:DEBUG:root:Text generated successfully.
+2024-10-28 12:48:14:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:48:14:DEBUG:root:Text is incomplete. Generating continuation.
+2024-10-28 12:48:14:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:14:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:48:14:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:48:14:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:48:14:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:16:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'452'), (b'num_tokens', b'92'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'521bce931905f73e26c90acfacbc1854'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'35'), (b'date', b'Mon, 28 Oct 2024 02:18:16 GMT'), (b'Content-Length', b'700'), (b'x-envoy-upstream-service-time', b'2405'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-10-28 12:48:16:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:48:16:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:48:16:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:48:16:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:48:16:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:48:16:DEBUG:root:Text generated successfully.
+2024-10-28 12:48:16:DEBUG:root:Completed text generation after continuation.
+2024-10-28 12:48:16:DEBUG:root:Attempt 1 - Generated Text Length: 5026 characters.
+2024-10-28 12:48:16:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:48:16:DEBUG:root:Text is complete.
+2024-10-28 12:48:16:DEBUG:root:bio.txt content length: 5026 characters.
+2024-10-28 12:48:16:INFO:root:Generating character_knowledge.txt for Atreus
+2024-10-28 12:48:16:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:16:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:48:16:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:48:16:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:48:16:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:50:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'104003'), (b'num_tokens', b'23134'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'ae5513c7c3e8929e3a5d2a834d8bfd6b'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'34'), (b'date', b'Mon, 28 Oct 2024 02:18:49 GMT'), (b'x-envoy-upstream-service-time', b'32996'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:48:50:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:48:50:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:48:50:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:48:50:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:48:50:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:48:50:DEBUG:root:Text generated successfully.
+2024-10-28 12:48:50:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:48:50:DEBUG:root:Text is complete.
+2024-10-28 12:48:50:DEBUG:root:Attempt 1 - Generated Text Length: 2710 characters.
+2024-10-28 12:48:50:DEBUG:root:Checking if the generated text is complete.
+2024-10-28 12:48:50:DEBUG:root:Text is complete.
+2024-10-28 12:48:50:DEBUG:root:character_knowledge.txt content length: 2710 characters.
+2024-10-28 12:48:50:INFO:root:Generating pre_conversation.json for Atreus
+2024-10-28 12:48:50:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:48:50:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:48:50:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:48:50:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:48:50:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:49:54:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'104104'), (b'num_tokens', b'23256'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'f1d7dc0da6b077cf72967f065575d1cc'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'37'), (b'date', b'Mon, 28 Oct 2024 02:19:54 GMT'), (b'x-envoy-upstream-service-time', b'63975'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:49:54:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:49:54:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:49:54:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:49:54:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:49:54:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:49:54:DEBUG:root:Text generated successfully.
+2024-10-28 12:49:54:DEBUG:root:Attempt 1 - Generated JSON Text:
+{
+    "pre_conversation": [
+        {
+            "line": "Character: I'm sorry, I can't help you with that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        },
+        {
+            "line": "Character: I don't know how to do that."
+        },
+        {
+            "line": "Character: I'm not sure what you mean."
+        },
+        {
+            "line": "Character: I'm not sure what you're asking."
+        },
+        {
+            "line": "Character: I'm not sure what you want me to do."
+        },
+        {
+            "line": "Character: I'm not sure what you're talking about."
+        }
+    ]
+}
+2024-10-28 12:49:54:INFO:root:JSON schema validation passed.
+2024-10-28 12:49:54:INFO:root:JSON generated and validated successfully.
+2024-10-28 12:49:54:INFO:root:Generating conversation.json for Atreus
+2024-10-28 12:49:54:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:49:54:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:49:54:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:49:54:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:49:54:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:51:02:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'102562'), (b'num_tokens', b'22915'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'f22bf745627eb79f30df641653968439'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'39'), (b'date', b'Mon, 28 Oct 2024 02:21:02 GMT'), (b'x-envoy-upstream-service-time', b'67578'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:51:02:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:51:02:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:51:02:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:51:02:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:51:02:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:51:02:DEBUG:root:Text generated successfully.
+2024-10-28 12:51:02:DEBUG:root:Attempt 1 - Generated JSON Text:
+{
+  "conversation": [
+    {
+      "sender": "Character",
+      "message": "I'm not sure what you mean by that."
+    },
+    {
+      "sender": "Character",
+      "message": "I'm just trying to understand your perspective."
+    },
+    {
+      "sender": "Character",
+      "message": "It's not easy being a god, you know."
+    },
+    {
+      "sender": "Character",
+      "message": "I have to make tough decisions every day."
+    },
+    {
+      "sender": "Character",
+      "message": "And sometimes, I have to do things that others might not agree with."
+    },
+    {
+      "sender": "Character",
+      "message": "But I do it because I believe it's the right thing to do."
+    },
+    {
+      "sender": "Character",
+      "message": "I know it's hard for you to understand, but I hope you can trust me."
+    },
+    {
+      "sender": "Character",
+      "message": "I'm just trying to do what's best for everyone."
+    },
+    {
+      "sender": "Character",
+      "message": "Even if it means making some tough choices."
+    },
+    {
+      "sender": "Character",
+      "message": "I know it's not always easy, but I hope you can see that I'm doing my best."
+    }
+  ]
+}
+2024-10-28 12:51:02:INFO:root:JSON schema validation passed.
+2024-10-28 12:51:02:INFO:root:JSON generated and validated successfully.
+2024-10-28 12:51:02:INFO:root:Creating character files for Atreus
+2024-10-28 12:51:02:INFO:root:Wrote text file: God_of_War_(2018)\characters\Atreus\bio.txt
+2024-10-28 12:51:02:INFO:root:Wrote text file: God_of_War_(2018)\characters\Atreus\character_knowledge.txt
+2024-10-28 12:51:02:INFO:root:Wrote JSON file: God_of_War_(2018)\characters\Atreus\pre_conversation.json
+2024-10-28 12:51:02:INFO:root:Wrote JSON file: God_of_War_(2018)\characters\Atreus\conversation.json
+2024-10-28 12:51:02:INFO:root:No image sources provided. Fetching images from SerpAPI.
+2024-10-28 12:51:02:INFO:root:Fetching images with query: Atreus front view portrait
+2024-10-28 12:51:02:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): serpapi.com:443
+2024-10-28 12:51:05:DEBUG:urllib3.connectionpool:https://serpapi.com:443 "GET /search?engine=google&tbm=isch&q=Atreus+front+view+portrait&num=5&ijn=0&api_key=06d80731ed7ac167f17c13e6225ef62614c116911d46894b427a861fcc317777&safe=active HTTP/11" 200 None
+2024-10-28 12:51:05:INFO:root:Fetched 5 image URLs from SerpAPI for query: Atreus front view portrait
+2024-10-28 12:51:05:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): static.wikia.nocookie.net:443
+2024-10-28 12:51:05:DEBUG:urllib3.connectionpool:https://static.wikia.nocookie.net:443 "GET /godofwar/images/a/a8/Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.54.20.png/revision/latest?cb=20230127152503 HTTP/11" 200 3969565
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:STREAM b'tIME' 41 7
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:b'tIME' 41 7 (unknown)
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 60 9
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 81 4
+2024-10-28 12:51:07:DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 97 3969452
+2024-10-28 12:51:07:INFO:root:Downloaded and verified image from https://static.wikia.nocookie.net/godofwar/images/a/a8/Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.54.20.png/revision/latest?cb=20230127152503.
+2024-10-28 12:51:07:INFO:root:Downloaded image https://static.wikia.nocookie.net/godofwar/images/a/a8/Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.54.20.png/revision/latest?cb=20230127152503 to God_of_War_(2018)\characters\Atreus\images\1.jpg.
+2024-10-28 12:51:07:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): static.wikia.nocookie.net:443
+2024-10-28 12:51:08:DEBUG:urllib3.connectionpool:https://static.wikia.nocookie.net:443 "GET /godofwar/images/a/ad/Fj4G5cvWYAkwdQP.jpeg/revision/latest/scale-to-width-down/250?cb=20230107100534 HTTP/11" 200 27109
+2024-10-28 12:51:08:INFO:root:Downloaded and verified image from https://static.wikia.nocookie.net/godofwar/images/a/ad/Fj4G5cvWYAkwdQP.jpeg/revision/latest/scale-to-width-down/250?cb=20230107100534.
+2024-10-28 12:51:08:INFO:root:Downloaded image https://static.wikia.nocookie.net/godofwar/images/a/ad/Fj4G5cvWYAkwdQP.jpeg/revision/latest/scale-to-width-down/250?cb=20230107100534 to God_of_War_(2018)\characters\Atreus\images\2.jpg.
+2024-10-28 12:51:08:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdnb.artstation.com:443
+2024-10-28 12:51:08:DEBUG:urllib3.connectionpool:https://cdnb.artstation.com:443 "GET /p/assets/images/images/012/684/949/large/pascual-rubio-cervera-atreus-hex-web-v01.jpg?1536010730 HTTP/11" 200 339603
+2024-10-28 12:51:08:INFO:root:Downloaded and verified image from https://cdnb.artstation.com/p/assets/images/images/012/684/949/large/pascual-rubio-cervera-atreus-hex-web-v01.jpg?1536010730.
+2024-10-28 12:51:08:INFO:root:Downloaded image https://cdnb.artstation.com/p/assets/images/images/012/684/949/large/pascual-rubio-cervera-atreus-hex-web-v01.jpg?1536010730 to God_of_War_(2018)\characters\Atreus\images\3.jpg.
+2024-10-28 12:51:08:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): static.wikia.nocookie.net:443
+2024-10-28 12:51:09:DEBUG:urllib3.connectionpool:https://static.wikia.nocookie.net:443 "GET /godofwar/images/b/ba/FmIgYj3XEAU2V3w.jpeg/revision/latest/scale-to-width-down/250?cb=20230113092043 HTTP/11" 200 28847
+2024-10-28 12:51:09:INFO:root:Downloaded and verified image from https://static.wikia.nocookie.net/godofwar/images/b/ba/FmIgYj3XEAU2V3w.jpeg/revision/latest/scale-to-width-down/250?cb=20230113092043.
+2024-10-28 12:51:09:INFO:root:Downloaded image https://static.wikia.nocookie.net/godofwar/images/b/ba/FmIgYj3XEAU2V3w.jpeg/revision/latest/scale-to-width-down/250?cb=20230113092043 to God_of_War_(2018)\characters\Atreus\images\4.jpg.
+2024-10-28 12:51:09:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oyster.ignimgs.com:443
+2024-10-28 12:51:09:DEBUG:urllib3.connectionpool:https://oyster.ignimgs.com:443 "GET /mediawiki/apis.ign.com/god-of-war-ragnarok/1/1b/Ater.jpg?width=1280 HTTP/11" 200 119615
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing BlpImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing BmpImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing BufrStubImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing CurImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing DcxImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing DdsImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing EpsImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing FitsImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing FliImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing FpxImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing FtexImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing GbrImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing GifImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing GribStubImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing IcnsImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing IcoImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing ImImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing ImtImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing IptcImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing JpegImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing McIdasImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing MicImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing MpegImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing MpoImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing MspImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PalmImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PcdImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PcxImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PdfImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PixarImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PngImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PpmImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing PsdImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing QoiImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing SgiImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing SpiderImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing SunImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing TgaImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing TiffImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing WebPImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing WmfImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing XbmImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing XpmImagePlugin
+2024-10-28 12:51:09:DEBUG:PIL.Image:Importing XVThumbImagePlugin
+2024-10-28 12:51:09:ERROR:root:Failed to download or verify image from https://oyster.ignimgs.com/mediawiki/apis.ign.com/god-of-war-ragnarok/1/1b/Ater.jpg?width=1280: cannot identify image file 'C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\CharacterProfileGenerator\\God_of_War_(2018)\\characters\\Atreus\\images\\5.jpg'
+2024-10-28 12:51:09:INFO:root:Copied fallback image from God_of_War_(2018)\characters\Atreus\images\4.jpg to God_of_War_(2018)\characters\Atreus\images\5.jpg.
+2024-10-28 12:51:09:INFO:root:Downloaded image https://oyster.ignimgs.com/mediawiki/apis.ign.com/god-of-war-ragnarok/1/1b/Ater.jpg?width=1280 to God_of_War_(2018)\characters\Atreus\images\5.jpg.
+2024-10-28 12:51:09:INFO:root:Added 5 images for Atreus.
+2024-10-28 12:51:09:INFO:root:Copied God_of_War_(2018)\characters\Atreus\images\1.jpg as test.jpg in the project root.
+2024-10-28 12:51:09:DEBUG:httpcore.connection:close.started
+2024-10-28 12:51:09:DEBUG:httpcore.connection:close.complete
+2024-10-28 12:51:09:DEBUG:httpcore.connection:connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-10-28 12:51:09:DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDDE363430>
+2024-10-28 12:51:09:DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CDDCC80140> server_hostname='api.cohere.com' timeout=300
+2024-10-28 12:51:10:DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDDE363550>
+2024-10-28 12:51:10:DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+2024-10-28 12:51:10:DEBUG:httpcore.http11:send_request_headers.complete
+2024-10-28 12:51:10:DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+2024-10-28 12:51:10:DEBUG:httpcore.http11:send_request_body.complete
+2024-10-28 12:51:10:DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+2024-10-28 12:51:24:DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'101255'), (b'num_tokens', b'22601'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'b9a828700335976d7a69b496deb0eada'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'39'), (b'date', b'Mon, 28 Oct 2024 02:21:24 GMT'), (b'x-envoy-upstream-service-time', b'14492'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2024-10-28 12:51:24:INFO:httpx:HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-10-28 12:51:24:DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+2024-10-28 12:51:24:DEBUG:httpcore.http11:receive_response_body.complete
+2024-10-28 12:51:24:DEBUG:httpcore.http11:response_closed.started
+2024-10-28 12:51:24:DEBUG:httpcore.http11:response_closed.complete
+2024-10-28 12:51:24:DEBUG:root:Text generated successfully.
+2024-10-28 12:51:24:DEBUG:root:Attempt 1 - Generated JSON Text:
+{
+  "voice_type": "male",
+  "pitch": "medium",
+  "speed": "normal",
+  "tone": "calm"
+}
+2024-10-28 12:51:24:INFO:root:JSON schema validation passed.
+2024-10-28 12:51:24:INFO:root:JSON generated and validated successfully.
+2024-10-28 12:51:24:INFO:root:Wrote JSON file: God_of_War_(2018)\characters\Atreus\voice_config.json
+2024-10-28 12:51:24:INFO:root:Wrote voice configuration file: God_of_War_(2018)\characters\Atreus\voice_config.json
+2024-10-28 12:51:24:INFO:root:Running create_character_vectordb.ipynb for character: Atreus
+2024-10-28 12:51:24:INFO:root:Executing notebook: notebooks\create_character_vectordb.ipynb
+2024-10-28 12:51:24:INFO:root:Output will be saved to: notebooks_output\executed_create_character_vectordb.ipynb
+2024-10-28 12:51:24:INFO:papermill:Input Notebook:  notebooks\create_character_vectordb.ipynb
+2024-10-28 12:51:24:INFO:papermill:Output Notebook: notebooks_output\executed_create_character_vectordb.ipynb
+2024-10-28 12:51:25:DEBUG:asyncio:Using selector: SelectSelector
+2024-10-28 12:51:25:DEBUG:traitlets:Instantiating kernel 'Python 3 (ipykernel)' with kernel provisioner: local-provisioner
+2024-10-28 12:51:25:DEBUG:traitlets:Starting kernel: ['C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\.venv\\Scripts\\python.exe', '-m', 'ipykernel_launcher', '-f', 'C:\\Users\\samau\\AppData\\Local\\Temp\\tmpr092iim1.json', '--HistoryManager.hist_file=:memory:']
+2024-10-28 12:51:25:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54775
+2024-10-28 12:51:25:DEBUG:traitlets:connecting iopub channel to tcp://127.0.0.1:54772
+2024-10-28 12:51:25:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54772
+2024-10-28 12:51:25:DEBUG:traitlets:connecting shell channel to tcp://127.0.0.1:54771
+2024-10-28 12:51:25:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54771
+2024-10-28 12:51:25:DEBUG:traitlets:connecting stdin channel to tcp://127.0.0.1:54773
+2024-10-28 12:51:25:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54773
+2024-10-28 12:51:25:DEBUG:traitlets:connecting heartbeat channel to tcp://127.0.0.1:54774
+2024-10-28 12:51:25:DEBUG:asyncio:Using selector: SelectSelector
+2024-10-28 12:51:25:DEBUG:traitlets:connecting control channel to tcp://127.0.0.1:54775
+2024-10-28 12:51:25:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54775
+2024-10-28 12:51:27:INFO:papermill:Executing notebook with kernel: python3
+2024-10-28 12:51:27:DEBUG:papermill:Skipping non-executing cell 0
+2024-10-28 12:51:27:DEBUG:papermill:Executing cell:
+# Import necessary modules
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings import CohereEmbeddings
+import json
+import random
+from langchain.vectorstores import Chroma
+
+with open('config.json', 'r') as f:
+    config = json.load(f)
+    game_name = config['game_name']
+    character = config['characters'][0]
+    character_name = character['name']
+
+# Load the character's knowledge file
+with open(f'{game_name}/characters/{character_name}/character_knowledge.txt', errors='ignore') as f:
+    public_info = f.read()
+
+# Create a text splitter
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=600,
+    chunk_overlap=0,
+    length_function=len,
+    separators=['\n\n\n', '\n\n', '\n', '.', ',', ' ']
+)
+
+# Split the text
+public_info_list = text_splitter.split_text(public_info)
+
+# Randomly select an API key
+selected_key = json.load(open('apikeys.json', 'r'))['api_keys'][random.randint(
+    0, len(json.load(open('apikeys.json', 'r'))['api_keys'])-1)]
+
+# Initialize the embedding model
+embeddings = CohereEmbeddings(cohere_api_key=selected_key, user_agent='CharacterProfileGenerator/1.0')
+
+# Set the persist directory
+persist_directory = f'{game_name}/characters/{character_name}/vectordb'
+
+# Create and persist the vector database
+vectordb = Chroma.from_texts(public_info_list, embeddings, persist_directory=persist_directory)
+vectordb.persist()
+
+2024-10-28 12:51:27:DEBUG:papermill:msg_type: status
+2024-10-28 12:51:27:DEBUG:papermill:content: {'execution_state': 'busy'}
+2024-10-28 12:51:27:DEBUG:papermill:msg_type: execute_input
+2024-10-28 12:51:27:DEBUG:papermill:content: {'code': "# Import necessary modules\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import CohereEmbeddings\nimport json\nimport random\nfrom langchain.vectorstores import Chroma\n\nwith open('config.json', 'r') as f:\n    config = json.load(f)\n    game_name = config['game_name']\n    character = config['characters'][0]\n    character_name = character['name']\n\n# Load the character's knowledge file\nwith open(f'{game_name}/characters/{character_name}/character_knowledge.txt', errors='ignore') as f:\n    public_info = f.read()\n\n# Create a text splitter\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=600,\n    chunk_overlap=0,\n    length_function=len,\n    separators=['\\n\\n\\n', '\\n\\n', '\\n', '.', ',', ' ']\n)\n\n# Split the text\npublic_info_list = text_splitter.split_text(public_info)\n\n# Randomly select an API key\nselected_key = json.load(open('apikeys.json', 'r'))['api_keys'][random.randint(\n    0, len(json.load(open('apikeys.json', 'r'))['api_keys'])-1)]\n\n# Initialize the embedding model\nembeddings = CohereEmbeddings(cohere_api_key=selected_key, user_agent='CharacterProfileGenerator/1.0')\n\n# Set the persist directory\npersist_directory = f'{game_name}/characters/{character_name}/vectordb'\n\n# Create and persist the vector database\nvectordb = Chroma.from_texts(public_info_list, embeddings, persist_directory=persist_directory)\nvectordb.persist()\n", 'execution_count': 1}
+2024-10-28 12:51:28:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:28:DEBUG:papermill:content: {'name': 'stderr', 'text': "C:\\Users\\samau\\AppData\\Local\\Temp\\ipykernel_7504\\2331195081.py:34: LangChainDeprecationWarning: The class `CohereEmbeddings` was deprecated in LangChain 0.0.30 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-cohere package and should be used instead. To use it run `pip install -U :class:`~langchain-cohere` and import as `from :class:`~langchain_cohere import CohereEmbeddings``.\n  embeddings = CohereEmbeddings(cohere_api_key=selected_key, user_agent='CharacterProfileGenerator/1.0')\n"}
+2024-10-28 12:51:41:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:41:DEBUG:papermill:content: {'name': 'stdout', 'text': 'sagemaker.config INFO - Not applying SDK defaults from location: C:\\ProgramData\\sagemaker\\sagemaker\\config.yaml\n'}
+2024-10-28 12:51:41:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:41:DEBUG:papermill:content: {'name': 'stdout', 'text': 'sagemaker.config INFO - Not applying SDK defaults from location: C:\\Users\\samau\\AppData\\Local\\sagemaker\\sagemaker\\config.yaml\n'}
+2024-10-28 12:51:44:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:44:DEBUG:papermill:content: {'name': 'stderr', 'text': 'C:\\Users\\samau\\AppData\\Local\\Temp\\ipykernel_7504\\2331195081.py:41: LangChainDeprecationWarning: Since Chroma 0.4.x the manual persistence method is no longer supported as docs are automatically persisted.\n  vectordb.persist()\n'}
+2024-10-28 12:51:44:DEBUG:papermill:msg_type: status
+2024-10-28 12:51:44:DEBUG:papermill:content: {'execution_state': 'idle'}
+2024-10-28 12:51:45:DEBUG:traitlets:Destroying zmq context for <jupyter_client.asynchronous.client.AsyncKernelClient object at 0x000001CDDD01B250>
+2024-10-28 12:51:45:INFO:root:Successfully executed create_character_vectordb.ipynb and saved to notebooks_output\executed_create_character_vectordb.ipynb
+2024-10-28 12:51:45:INFO:root:Running create_face_recognition_representation.ipynb for game: God_of_War_(2018)
+2024-10-28 12:51:45:INFO:root:Executing notebook: notebooks\create_face_recognition_representation.ipynb
+2024-10-28 12:51:45:INFO:root:Output will be saved to: notebooks_output\executed_create_face_recognition_representation.ipynb
+2024-10-28 12:51:45:INFO:papermill:Input Notebook:  notebooks\create_face_recognition_representation.ipynb
+2024-10-28 12:51:45:INFO:papermill:Output Notebook: notebooks_output\executed_create_face_recognition_representation.ipynb
+2024-10-28 12:51:45:DEBUG:traitlets:Instantiating kernel 'Python 3 (ipykernel)' with kernel provisioner: local-provisioner
+2024-10-28 12:51:45:DEBUG:traitlets:Starting kernel: ['C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\.venv\\Scripts\\python.exe', '-m', 'ipykernel_launcher', '-f', 'C:\\Users\\samau\\AppData\\Local\\Temp\\tmp988unlwt.json', '--HistoryManager.hist_file=:memory:']
+2024-10-28 12:51:45:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54883
+2024-10-28 12:51:45:DEBUG:traitlets:connecting iopub channel to tcp://127.0.0.1:54880
+2024-10-28 12:51:45:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54880
+2024-10-28 12:51:45:DEBUG:traitlets:connecting shell channel to tcp://127.0.0.1:54879
+2024-10-28 12:51:45:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54879
+2024-10-28 12:51:45:DEBUG:traitlets:connecting stdin channel to tcp://127.0.0.1:54881
+2024-10-28 12:51:45:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54881
+2024-10-28 12:51:45:DEBUG:traitlets:connecting heartbeat channel to tcp://127.0.0.1:54882
+2024-10-28 12:51:45:DEBUG:asyncio:Using selector: SelectSelector
+2024-10-28 12:51:45:DEBUG:traitlets:connecting control channel to tcp://127.0.0.1:54883
+2024-10-28 12:51:45:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54883
+2024-10-28 12:51:47:INFO:papermill:Executing notebook with kernel: python3
+2024-10-28 12:51:47:DEBUG:papermill:Skipping non-executing cell 0
+2024-10-28 12:51:47:DEBUG:papermill:Executing cell:
+from deepface import DeepFace
+import json
+
+with open('config.json', 'r') as f:
+    config = json.load(f)
+    game_name = config['game_name']
+    character = config['characters'][0]
+    character_name = character['name']
+
+# Perform facial recognition
+dfs = DeepFace.find(
+    img_path="test.jpg",
+    db_path=f"{game_name}/characters/{character_name}/images",
+    model_name='Facenet512'
+)
+2024-10-28 12:51:47:DEBUG:papermill:msg_type: status
+2024-10-28 12:51:47:DEBUG:papermill:content: {'execution_state': 'busy'}
+2024-10-28 12:51:47:DEBUG:papermill:msg_type: execute_input
+2024-10-28 12:51:47:DEBUG:papermill:content: {'code': 'from deepface import DeepFace\nimport json\n\nwith open(\'config.json\', \'r\') as f:\n    config = json.load(f)\n    game_name = config[\'game_name\']\n    character = config[\'characters\'][0]\n    character_name = character[\'name\']\n\n# Perform facial recognition\ndfs = DeepFace.find(\n    img_path="test.jpg",\n    db_path=f"{game_name}/characters/{character_name}/images",\n    model_name=\'Facenet512\'\n)', 'execution_count': 1}
+2024-10-28 12:51:55:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:55:DEBUG:papermill:content: {'name': 'stdout', 'text': 'WARNING:tensorflow:From C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\.venv\\lib\\site-packages\\tf_keras\\src\\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.\n\n'}
+2024-10-28 12:51:56:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:56:DEBUG:papermill:content: {'name': 'stdout', 'text': '24-10-28 12:51:56 - Found 0 newly added image(s), 0 removed image(s), 5 replaced image(s).\n'}
+2024-10-28 12:51:56:DEBUG:papermill:msg_type: stream
+2024-10-28 12:51:56:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations:   0%|                                                                                                                                                                                                                                                                        | 0/5 [00:00<?, ?it/s]'}
+2024-10-28 12:52:00:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:00:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations:  20%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f                                                                                                                                                                                                            | 1/5 [00:04<00:17,  4.29s/it]'}
+2024-10-28 12:52:01:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:01:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations:  40%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d                                                                                                                                                         | 2/5 [00:04<00:05,  1.91s/it]'}
+2024-10-28 12:52:02:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:02:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations:  60%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c                                                                                                      | 3/5 [00:05<00:03,  1.70s/it]'}
+2024-10-28 12:52:02:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:02:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a                                                   | 4/5 [00:06<00:01,  1.12s/it]'}
+2024-10-28 12:52:04:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:04:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:07<00:00,  1.14s/it]'}
+2024-10-28 12:52:04:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:04:DEBUG:papermill:content: {'name': 'stderr', 'text': '\rFinding representations: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:07<00:00,  1.48s/it]'}
+2024-10-28 12:52:04:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:04:DEBUG:papermill:content: {'name': 'stderr', 'text': '\n'}
+2024-10-28 12:52:04:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:04:DEBUG:papermill:content: {'name': 'stdout', 'text': '24-10-28 12:52:04 - There are now 6 representations in ds_model_facenet512_detector_opencv_aligned_normalization_base_expand_0.pkl\n24-10-28 12:52:04 - Searching test.jpg in 6 length datastore\n'}
+2024-10-28 12:52:05:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:05:DEBUG:papermill:content: {'name': 'stdout', 'text': '24-10-28 12:52:05 - find function duration 8.793576955795288 seconds\n'}
+2024-10-28 12:52:05:DEBUG:papermill:msg_type: status
+2024-10-28 12:52:05:DEBUG:papermill:content: {'execution_state': 'idle'}
+2024-10-28 12:52:06:DEBUG:traitlets:Destroying zmq context for <jupyter_client.asynchronous.client.AsyncKernelClient object at 0x000001CDDCFB6EF0>
+2024-10-28 12:52:06:INFO:root:Successfully executed create_face_recognition_representation.ipynb and saved to notebooks_output\executed_create_face_recognition_representation.ipynb
+2024-10-28 12:52:06:INFO:root:Running create_public_vectordb.ipynb for game: God_of_War_(2018)
+2024-10-28 12:52:06:INFO:root:Executing notebook: notebooks\create_public_vectordb.ipynb
+2024-10-28 12:52:06:INFO:root:Output will be saved to: notebooks_output\executed_create_public_vectordb.ipynb
+2024-10-28 12:52:06:INFO:papermill:Input Notebook:  notebooks\create_public_vectordb.ipynb
+2024-10-28 12:52:06:INFO:papermill:Output Notebook: notebooks_output\executed_create_public_vectordb.ipynb
+2024-10-28 12:52:06:DEBUG:traitlets:Instantiating kernel 'Python 3 (ipykernel)' with kernel provisioner: local-provisioner
+2024-10-28 12:52:06:DEBUG:traitlets:Starting kernel: ['C:\\Users\\samau\\OneDrive\\Desktop\\Interactive-LLM-Powered-NPCs\\.venv\\Scripts\\python.exe', '-m', 'ipykernel_launcher', '-f', 'C:\\Users\\samau\\AppData\\Local\\Temp\\tmpaluyig_c.json', '--HistoryManager.hist_file=:memory:']
+2024-10-28 12:52:06:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54974
+2024-10-28 12:52:06:DEBUG:traitlets:connecting iopub channel to tcp://127.0.0.1:54971
+2024-10-28 12:52:06:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54971
+2024-10-28 12:52:06:DEBUG:traitlets:connecting shell channel to tcp://127.0.0.1:54970
+2024-10-28 12:52:06:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54970
+2024-10-28 12:52:06:DEBUG:traitlets:connecting stdin channel to tcp://127.0.0.1:54972
+2024-10-28 12:52:06:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54972
+2024-10-28 12:52:06:DEBUG:traitlets:connecting heartbeat channel to tcp://127.0.0.1:54973
+2024-10-28 12:52:06:DEBUG:asyncio:Using selector: SelectSelector
+2024-10-28 12:52:06:DEBUG:traitlets:connecting control channel to tcp://127.0.0.1:54974
+2024-10-28 12:52:06:DEBUG:traitlets:Connecting to: tcp://127.0.0.1:54974
+2024-10-28 12:52:07:INFO:papermill:Executing notebook with kernel: python3
+2024-10-28 12:52:07:DEBUG:papermill:Skipping non-executing cell 0
+2024-10-28 12:52:07:DEBUG:papermill:Executing cell:
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings import CohereEmbeddings
+import json
+import random
+from langchain.vectorstores import Chroma
+
+with open('config.json', 'r') as f:
+    config = json.load(f)
+    game_name = config['game_name']
+    character = config['characters'][0]
+    character_name = character['name']
+
+# Load the public information file
+with open(f'{game_name}/public_info.txt', errors='ignore') as f:
+    public_info = f.read()
+
+# Create a text splitter
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1500,
+    chunk_overlap=500,
+    length_function=len,
+    separators=['\n\n\n', '\n\n', '\n', '.', ',', ' ']
+)
+
+# Split the text
+public_info_list = text_splitter.split_text(public_info)
+
+# Randomly select an API key from apikeys.json
+with open('apikeys.json', 'r') as f:
+    api_keys = json.load(f)['api_keys']
+selected_key = api_keys[random.randint(0, len(api_keys) - 1)]
+
+# Initialize the Cohere embedding model with user agent fallback
+embeddings = CohereEmbeddings(
+    cohere_api_key=selected_key, 
+    model="large",  # Specify model size
+    user_agent="CharacterProfileGenerator/1.0"  # Set user agent
+)
+
+# Set the persist directory
+persist_directory = f'{game_name}/public_vectordb'
+
+# Create and persist the vector database
+vectordb = Chroma.from_texts(public_info_list, embeddings, persist_directory=persist_directory)
+vectordb.persist()
+
+2024-10-28 12:52:07:DEBUG:papermill:msg_type: status
+2024-10-28 12:52:07:DEBUG:papermill:content: {'execution_state': 'busy'}
+2024-10-28 12:52:07:DEBUG:papermill:msg_type: execute_input
+2024-10-28 12:52:07:DEBUG:papermill:content: {'code': 'from langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import CohereEmbeddings\nimport json\nimport random\nfrom langchain.vectorstores import Chroma\n\nwith open(\'config.json\', \'r\') as f:\n    config = json.load(f)\n    game_name = config[\'game_name\']\n    character = config[\'characters\'][0]\n    character_name = character[\'name\']\n\n# Load the public information file\nwith open(f\'{game_name}/public_info.txt\', errors=\'ignore\') as f:\n    public_info = f.read()\n\n# Create a text splitter\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=1500,\n    chunk_overlap=500,\n    length_function=len,\n    separators=[\'\\n\\n\\n\', \'\\n\\n\', \'\\n\', \'.\', \',\', \' \']\n)\n\n# Split the text\npublic_info_list = text_splitter.split_text(public_info)\n\n# Randomly select an API key from apikeys.json\nwith open(\'apikeys.json\', \'r\') as f:\n    api_keys = json.load(f)[\'api_keys\']\nselected_key = api_keys[random.randint(0, len(api_keys) - 1)]\n\n# Initialize the Cohere embedding model with user agent fallback\nembeddings = CohereEmbeddings(\n    cohere_api_key=selected_key, \n    model="large",  # Specify model size\n    user_agent="CharacterProfileGenerator/1.0"  # Set user agent\n)\n\n# Set the persist directory\npersist_directory = f\'{game_name}/public_vectordb\'\n\n# Create and persist the vector database\nvectordb = Chroma.from_texts(public_info_list, embeddings, persist_directory=persist_directory)\nvectordb.persist()\n', 'execution_count': 1}
+2024-10-28 12:52:09:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:09:DEBUG:papermill:content: {'name': 'stderr', 'text': 'C:\\Users\\samau\\AppData\\Local\\Temp\\ipykernel_15552\\1324439711.py:34: LangChainDeprecationWarning: The class `CohereEmbeddings` was deprecated in LangChain 0.0.30 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-cohere package and should be used instead. To use it run `pip install -U :class:`~langchain-cohere` and import as `from :class:`~langchain_cohere import CohereEmbeddings``.\n  embeddings = CohereEmbeddings(\n'}
+2024-10-28 12:52:22:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:22:DEBUG:papermill:content: {'name': 'stdout', 'text': 'sagemaker.config INFO - Not applying SDK defaults from location: C:\\ProgramData\\sagemaker\\sagemaker\\config.yaml\n'}
+2024-10-28 12:52:22:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:22:DEBUG:papermill:content: {'name': 'stdout', 'text': 'sagemaker.config INFO - Not applying SDK defaults from location: C:\\Users\\samau\\AppData\\Local\\sagemaker\\sagemaker\\config.yaml\n'}
+2024-10-28 12:52:24:DEBUG:papermill:msg_type: stream
+2024-10-28 12:52:24:DEBUG:papermill:content: {'name': 'stderr', 'text': 'C:\\Users\\samau\\AppData\\Local\\Temp\\ipykernel_15552\\1324439711.py:45: LangChainDeprecationWarning: Since Chroma 0.4.x the manual persistence method is no longer supported as docs are automatically persisted.\n  vectordb.persist()\n'}
+2024-10-28 12:52:24:DEBUG:papermill:msg_type: status
+2024-10-28 12:52:24:DEBUG:papermill:content: {'execution_state': 'idle'}
+2024-10-28 12:52:25:DEBUG:traitlets:Destroying zmq context for <jupyter_client.asynchronous.client.AsyncKernelClient object at 0x000001CDDCDD9930>
+2024-10-28 12:52:25:INFO:root:Successfully executed create_public_vectordb.ipynb and saved to notebooks_output\executed_create_public_vectordb.ipynb
