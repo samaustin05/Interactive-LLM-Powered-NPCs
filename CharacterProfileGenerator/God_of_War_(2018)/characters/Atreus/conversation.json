@@ -1,0 +1,44 @@
+{
+    "conversation": [
+        {
+            "sender": "Character",
+            "message": "I'm so glad you're here. I've been waiting for you."
+        },
+        {
+            "sender": "Character",
+            "message": "It's been a long time since we last spoke. How have you been?"
+        },
+        {
+            "sender": "Character",
+            "message": "I've been well, thank you. Just busy with work and family."
+        },
+        {
+            "sender": "Character",
+            "message": "That's great to hear. I've been keeping myself busy too, but I'm always happy to make time for old friends."
+        },
+        {
+            "sender": "Character",
+            "message": "It's been a while since we last saw each other. How have you been?"
+        },
+        {
+            "sender": "Character",
+            "message": "I've been good, thank you. Just busy with work and family."
+        },
+        {
+            "sender": "Character",
+            "message": "That's great to hear. I've been keeping myself busy too, but I'm always happy to make time for old friends."
+        },
+        {
+            "sender": "Character",
+            "message": "I'm so glad you're here. I've been waiting for you."
+        },
+        {
+            "sender": "Character",
+            "message": "It's been a long time since we last spoke. How have you been?"
+        },
+        {
+            "sender": "Character",
+            "message": "I've been well, thank you. Just busy with work and family."
+        }
+    ]
+}

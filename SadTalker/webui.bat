@@ -10,7 +10,7 @@ call .\venv\Scripts\activate.bat
 set PYTHON="venv\Scripts\Python.exe"
 echo venv %PYTHON%
 
-%PYTHON% Launcher.py
+%PYTHON% Launcher.py --skip-torch-cuda-test
 
 echo.
 echo Launch unsuccessful. Exiting.
